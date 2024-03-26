@@ -1,5 +1,7 @@
 PROJECT_DIR=$PWD
 echo "$PROJECT_DIR"
+
+docker container rm -f voxelmap
 docker run -it --name voxelmap \
            -v "$PROJECT_DIR":/workspace/src/voxel \
-           registry.cn-hangzhou.aliyuncs.com/huiyan/dev:noetic-desktop-full
+           voxelmap:v1.0
